@@ -44,4 +44,5 @@ function onSubmit(e) {
     formEl.reset();
 
     localStorage.clear();
+    // localStorage.removeItem('feedback-form-state');
 }
