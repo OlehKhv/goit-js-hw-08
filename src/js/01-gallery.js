@@ -1,16 +1,11 @@
 import { galleryItems } from './gallery-items';
 
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const listEl = document.querySelector('.gallery');
 
 addMarkup(galleryItems);
-
-const lightbox = new SimpleLightbox('.gallery__link', {
-    captionsData: 'alt',
-    captionDelay: 250,
-});
 
 function addMarkup(arrGallery) {
     const markup = arrGallery
@@ -29,3 +24,8 @@ function addMarkup(arrGallery) {
         .join('');
     listEl.innerHTML = markup;
 }
+
+const lightbox = new SimpleLightbox('.gallery__link', {
+    captionsData: 'alt',
+    captionDelay: 250,
+});
